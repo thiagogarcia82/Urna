@@ -1,3 +1,17 @@
+@keyframes pisca {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
 body {
   margin: 0;
   display: flex;
@@ -24,7 +38,7 @@ body {
 }
 
 .teclado {
-  margin-left: 3px;
+  margin-left: 30px;
   background-color: #403A3A;
 }
 
@@ -78,27 +92,45 @@ body {
   display: flex;
 }
 
-.d1-left {
+.d-1-left {
   flex: 1;
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .d-1-1 {
   height: 50px;
   display: flex;
   align-items: center;
-
 }
 
 .d-1-2 {
   height: 50px;
   display: flex;
   align-items: center;
-
+  justify-content: center;
 }
 
 .d-1-3 {
   height: 50px;
+}
+
+.numero {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.pisca {
+  animation-name: pisca;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .d-1-4 {
@@ -106,21 +138,26 @@ body {
   line-height: 30px;
 }
 
-
-.d1-right {
+.d-1-right {
   width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.d-2 {
-  height: 50px;
+.d-1-image {
+  text-align: center;
+  margin: 5px;
   font-size: 14px;
-  border-top: 2px solid #000;
-  padding-left: 10;
 }
 
-.d-1 {
-  flex: 1;
+.d-1-image img {
+  width: 100%;
+}
 
+.small {
+  width: 80%;
+  font-size: 12px;
 }
 
 .d-2 {
@@ -128,6 +165,27 @@ body {
   font-size: 14px;
   border-top: 2px solid #000;
   padding-left: 10px;
+}
 
+.d-2 {
+  height: 50px;
+  font-size: 14px;
+  border-top: 2px solid #000;
+  padding-left: 10px;
+}
 
+.aviso-grande {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.aviso-gigante {
+  font-size: 100px;
+  font-weight: bold;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
